@@ -1,4 +1,4 @@
-name : Deploy to github Pages
+name: Deploy to github Pages
 
 on:
   push:
@@ -10,19 +10,19 @@ permissions:
   Pages: write
   id-token: write
 
-jobs: 
+jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout repository
         uses: actions/Checkout@v4
-      
+
       - name: setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with :
+        with:
           path: ./
 
-      - name: Deploy to Github Pages 
+      - name: Deploy to Github Pages
